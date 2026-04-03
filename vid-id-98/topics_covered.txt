@@ -11,4 +11,7 @@
 10. package.json
 11. package-lock.json
 12.exact meaning of version(x.y.z)
-patch, minor, major
+13. patch
+14. minor
+15. major
+16. .gitignore(file)
