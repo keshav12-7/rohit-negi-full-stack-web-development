@@ -14,10 +14,16 @@ const element2 = React.createElement(
   "kaise h aap log",
 );
 
+// with jsx 
+const newelement = <h1>hello coder army with jsx</h1>
+
+
 const main_element = React.createElement("div", { id: "main"}, [
   element1,
   element2,
 ]);
 
 const reactroot = ReactDOM.createRoot(document.getElementById("root"));
-reactroot.render(main_element);
+// reactroot.render(main_element);
+
+reactroot.render(newelement);
