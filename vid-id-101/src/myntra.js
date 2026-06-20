@@ -22,7 +22,9 @@ function App(){
 
         {/* // body */}
         
-        
+        <div className="upper-mid">
+            <button id="sort">sort</button>
+        </div>
 
         <div className="middle" style={{display:"flex", gap:"20px", flexWrap:"wrap"}}>
             
@@ -30,7 +32,7 @@ function App(){
                 {/* return js expression array,react element,string and numbers  */}
 
             {
-                arr.map((val,index)=><Card key={index} cloth={val.cloth} offer={val.offer} />)
+                arr.map((val,index)=><Card key={index} cloth={val.cloth} offer={val.offer} price={val.price} />)
 
                 // here map returns array which is acceptable here because in this block only something which is some returnable is accepted , 
                 // it's like [<card/>,<card/>,<card/>,<card/>,<card/>,<card/>,<card/>,<card/>,]
@@ -46,6 +48,8 @@ function App(){
         </>
     )
 }
+
+
 
 const reactRoot = reactDOM.createRoot(document.getElementById('root'));
 

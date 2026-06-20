@@ -76,3 +76,26 @@ body{
     color: white;
 
 }
+
+.upper-mid{
+    padding-left: 40px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+#sort{
+    padding: 10px;
+    border: 1px solid black ;
+    background: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    font-weight: bold;
+    border-radius: 15px;
+
+
+
+}
+#sort:hover{
+    background: gray;
+    color: whitesmoke;
+    border:none;
+}
