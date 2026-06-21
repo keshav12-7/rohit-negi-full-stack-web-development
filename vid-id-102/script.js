@@ -2,20 +2,23 @@ import React,{useState} from "react";
 import ReactDOM from "react-dom/client";
 
 function Counter(){
-    let count = 0;
+    let [count,setCount] = useState(0);
+
 
     function incrementNumber(){
         count=count+1;
+        setCount(count)
         console.log(`count value is ${count} `);
-        document.querySelector("h1").innerHTML=`Count is ${count}`;
+        // document.querySelector("h1").innerHTML=`Count is ${count}`;
         // document.querySelector(".increase").innerHTML=`increment ${count}`
         
     }
 
     function decrementNumber(){
         count-=1;
+        setCount(count)
         console.log(`count value is ${count}`);
-        document.querySelector("h1").innerHTML=`Count is ${count}`;
+        // document.querySelector("h1").innerHTML=`Count is ${count}`;
         // document.querySelector(".decrease").innerHTML=`decrement ${count}`
         
     }
