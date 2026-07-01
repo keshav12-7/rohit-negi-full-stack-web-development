@@ -30,3 +30,18 @@ button{
     font-weight: bold;
     
 }
+.counter{
+    height: 200px;
+    width: 300px;
+    background-color: blanchedalmond;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+    position: relative;
+    top: 200px;
+}
+.main{
+    display: flex;
+}

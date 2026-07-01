@@ -1,37 +1,31 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ReactDom from "react-dom/client";
-
-
+import Colorful from "./component/Colorful";
 // background color changer
 
-function Main(){
-    let [color,setcolor] = useState("white");
-    console.log("render");
-    
-    document.body.style.backgroundColor=color;
+function Main() {
+  const [count, setcount] = useState(0);
+  console.log("jhvjh");
+  
+  return (
+    <div className="main">
+        
+        
+      <div className="counter">
+        
+        
+        
+        <h1>Counter is : {count}</h1>
+        <button onClick={() => setcount(count + 1)}>Increment</button>
+      </div>
 
-    
-    return (
-        
-        <div className="container" style={{backgroundColor:"gray"}}>
-       
-        <h1>background color changer</h1>
-        <div className="but">
-            <button onClick={()=>setcolor("red")}>red</button>
-            <button onClick={()=>setcolor("green")}>green</button>
-            <button onClick={()=>setcolor("violet")}>violet</button>
-            <button onClick={()=>setcolor("blue")}>blue</button>
-            <button onClick={()=>setcolor("orange")}>orange</button>
-            <button onClick={()=>setcolor("yellow")}>yellow</button>
-            <button onClick={()=>setcolor("skyblue")}>skyblue</button>
-            
-        </div>
-        </div>
-        
-
-        
-    )
+      <Colorful />
+    </div>
+  );
+  console.log("hello");
+  
 }
 
-const reactroot = ReactDom.createRoot(document.getElementById('root')).render(<Main/>);
-
+const reactroot = ReactDom.createRoot(document.getElementById("root")).render(
+  <Main />,
+);
