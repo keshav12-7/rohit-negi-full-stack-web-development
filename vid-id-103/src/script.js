@@ -19,7 +19,8 @@ function Main() {
         <button onClick={() => setcount(count + 1)}>Increment</button>
       </div>
 
-      <Colorful />
+      {/* <Colorful name="hunny" /> */}
+      <Colorful name={count}/>
     </div>
   );
   console.log("hello");

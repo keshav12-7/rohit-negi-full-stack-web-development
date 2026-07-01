@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from "react";
 import ReactDom from "react-dom/client";
 
-function Colorful(){
+function Colorful(props){
     let [color,setcolor] = useState("white");
     
 
@@ -13,6 +13,8 @@ function Colorful(){
     // useEffect(useCallback,dependency)
 
     console.log("first");
+    console.log(props.name);
+    
     
 
     useEffect(()=>{
@@ -46,4 +48,4 @@ function Colorful(){
     )
 }
 
-export default Colorful;
+export default React.memo(Colorful);
