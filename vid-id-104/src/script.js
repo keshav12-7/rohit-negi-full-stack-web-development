@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import ReactDOM from "react-dom/client"
 
 function PasswordGenerator(){
@@ -7,7 +7,7 @@ function PasswordGenerator(){
     const [numberchanged,setnumberchanged]=useState(false);
     const [Characterchanged,setcharacterchanged]=useState(false);
 
-    function generatepassword(){
+    const generatepassword = useCallback(()=>{
         let str = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
         if(numberchanged){
             str+="0123456789";
@@ -21,7 +21,9 @@ function PasswordGenerator(){
         }
 
         setpassword(pass);
-    }
+    },[length,Characterchanged,numberchanged])
+
+    
 
     // generatepassword()
     // it will create infinite re-render loop 
